@@ -13,7 +13,7 @@ git push origin main
 \titleformat{\section}{\bfseries\Large}{\thesection}{1em}{}
 
 \title{\textbf{国内大模型舆情分析报告合集}}
-\author{某某大学 XX 专业 XX 组}
+\author{福州外语外贸学院 数据科学与大数据技术 专业 国内 组}
 \date{\today}
 
 \begin{document}
