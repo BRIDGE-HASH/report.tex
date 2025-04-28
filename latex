@@ -1,0 +1,53 @@
+\documentclass[UTF8,zihao=-4]{ctexreport} 
+
+\usepackage[a4paper, left=3.17cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+
+% 基本行距设定，接近23pt
+\setstretch{1.8}
+
+% 首行缩进
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+
+% 章节标题格式
+\titleformat{\chapter}[hang]{\heiti\zihao{-3}}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{23pt}{23pt}
+
+\titleformat{\section}[hang]{\heiti\zihao{4}}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{12pt}{12pt}
+
+\titleformat{\subsection}[hang]{\heiti\zihao{-4}}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{12pt}
+
+% 无编号章节（如“结论”）样式
+\titleformat{name=\chapter,numberless}[block]{\centering\heiti\zihao{-2}}{}{0pt}{}
+\titlespacing*{\chapter}{0pt}{23pt}{23pt}
+
+% 目录字体、样式
+\renewcommand{\cftchapterfont}{\songti\zihao{4}}
+\renewcommand{\cftchapterpagefont}{\songti\zihao{4}}
+\renewcommand{\cftsectionfont}{\songti\zihao{4}}
+\renewcommand{\cftsectionpagefont}{\songti\zihao{4}}
+\renewcommand{\cftsubsectionfont}{\songti\zihao{4}}
+\renewcommand{\cftsubsectionpagefont}{\songti\zihao{4}}
+
+% 目录点线
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% 目录行距（单倍）
+\setlength{\cftbeforechapskip}{0pt}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\songti\zihao{4}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
