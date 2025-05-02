@@ -2,10 +2,30 @@
 福州外语外贸学院 国内组
 组长：林翔宇
 组员 吴涛 何孝然 易超 方宏宇 李敬尧
-latex 林翔宇 易超
-markdown 林翔宇 吴涛 何孝然
-舆情报告 方宏宇 李敬尧
+ 林翔宇 负责latex代码 
+吴涛 何孝然 易超负责 markdown
+方宏宇 李敬尧 负责pdf
+提示词 
+你是一位精通 CTEX 报告模板的 LaTeX 专家，能输出完整可编译的 .tex 文件。请严格按照以下需求生成代码，并且“只输出代码”，不要添加任何注释或解释。
 
+1. 文档类：ctexreport，选项 [UTF8, zihao=-4]
+2. 纸张与边距：A4 纸，left=3.17cm, right=2.54cm, top=2.54cm, bottom=2.54cm
+3. 行距：使用 setspace 宏包，\setstretch{1.8}
+4. 首行缩进：2em，无段间距
+5. 章节标题（chapter/section/subsection）使用黑体，分别设定字号与段前后间距
+6. 无编号章节（如“结论”）居中显示、字号更大
+7. 目录：tocloft 宏包，统一宋体小四，单倍行距，使用点线对齐
+8. 页眉页脚：fancyhdr 宏包，页脚居中显示页码，无页眉
+在需求后附上最简文档骨架，让模型“照着填空”
+示例骨架：
+\documentclass[UTF8,zihao=-4]{ctexreport}
+% 在此添加宏包与设置
+\begin{document}
+  \tableofcontents
+  \chapter{引言}
+  …
+\end{document}
+结尾强调“只输出完整 LaTeX 代码，不要添加任何解释”，并在 API 调用时使用 stop=["\\end{document}"] 或类似机制，防止多余内容出现
 ## 项目背景
 ### 行业背景
 随着阿里通义千问（Qwen）、华为盘古大模型等国产大模型的快速发展，技术舆情分析需求呈现爆发式增长：
